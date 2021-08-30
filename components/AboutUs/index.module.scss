@@ -1,0 +1,40 @@
+@import "scss/index";
+
+.root{
+  background-color: #e8f8eb;
+  padding-top: 74px;
+  padding-bottom: 99px;
+  margin: auto;
+  width: 80%;
+  @media screen and (max-width: 375px){
+    width: 100%;
+    margin: 0;
+    padding-top: 31px;
+    padding-bottom: 39px;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+.green{
+  background-color: #e8f8eb;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;  
+  text-align: center;
+  color: #000000;
+  @media screen and (max-width: 375px){
+    font-size: 18px;
+  }
+}
+
+.text{
+  font-size: 18.4074px;
+  line-height: 22px;
+  text-align: center;
+  color: #4E4E4E;
+  margin-top: 10px;
+}
