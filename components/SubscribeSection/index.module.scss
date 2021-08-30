@@ -1,0 +1,117 @@
+@import "scss/index";
+
+
+.root{
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  @media screen and (max-width: 900px){
+    align-items: start;
+  }
+}
+
+.title{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 23px;
+  @media screen and (max-width: 930px){
+    text-align: center;
+  }
+  @media screen and (max-width: $sm-min){
+    font-size: 18px;
+  }
+}
+.success{
+  font-size: 18px;
+  margin-top: 15px;
+}
+.form{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 32px;
+
+
+  .button{
+    margin-left: 10px;
+  }
+  .inputField{
+
+  }
+  .input{
+    height: 50px;
+    border: 1px solid #EAEAEA;
+    border-radius: 3px;
+    width: 275px;
+    @media screen and (max-width: 500px){
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    flex-direction: column;
+    width: 100%;
+    .button{
+      margin-top: 20px;
+      margin-left: 0px;
+      width: 100%;
+    }
+  }
+}
+
+.percentSmallRight{
+  position: absolute;
+  top: 0;
+  right: 360px;
+  @media screen and (max-width: 930px){
+    display: none;
+  }
+}
+
+.percentLeft{
+  position: absolute;
+  bottom: -25px;
+  left: 54px;
+  @media screen and (max-width: 930px){
+    display: none;
+  }
+}
+
+.percentRight{
+  position: absolute;
+  bottom: -25px;
+  right: 54px;
+  @media screen and (max-width: 930px){
+    display: none;
+  }
+}
+
+.percentSmallLeft{
+  position: absolute;
+  top: 0;
+  left: 360px;
+  @media screen and (max-width: 930px){
+    display: none;
+  }
+}
+
+.ellipseSubscribe{
+  position: absolute;
+  bottom: 36px;
+  right: 389px;
+  @media screen and (max-width: 930px){
+    display: none;
+  }
+}
+
+.ellipseRight{
+  position: absolute;
+  right: 210px;
+  top: 131px;
+  @media screen and (max-width: $sm-min){
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+@import "scss/index";
+
+.root{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;
+  text-align: center;
+  color: #000000;
+}
+
+.text{
+  font-size: 18.4074px;
+  line-height: 22px;
+  text-align: center;
+  color: #4E4E4E;
+  width: 40%;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.switch{
+  padding: 10px 20px 10px 10px;
+  background: #F7F7F7;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}

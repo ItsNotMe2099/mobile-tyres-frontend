@@ -1,0 +1,109 @@
+query getShippingMethods{
+    eligibleShippingMethods{
+        id
+        code
+        name
+    }
+}
+
+query boxberryListPoints{
+    boxberryListPoints{
+        Code,
+        Name,
+        Address,
+        Phone,
+        WorkShedule,
+        TripDescription,
+        DeliveryPeriod,
+        CityCode,
+        CityName,
+        TariffZone,
+        Settlement,
+        Area,
+        Country,
+        GPS,
+        AddressReduce,
+        OnlyPrepaidOrders,
+        Acquiring,
+        DigitalSignature,
+        CountryCode,
+        NalKD,
+        Metro,
+        TypeOfOffice,
+        VolumeLimit,
+        LoadLimit
+    }
+}
+query cdekListPoints{
+    cdekListPoints{
+        code,
+        name,
+        location {
+            country_code,
+            region_code,
+            region,
+            city_code,
+            city,
+            postal_code,
+            longitude,
+            latitude,
+            address,
+            address_full,
+        }
+        address_comment,
+        nearest_station,
+        nearest_metro_station,
+        work_time,
+        phones {
+            number,
+            additional,
+        }
+        email,
+        note,
+        type,
+        owner_code,
+        take_only,
+        is_handout,
+        is_reception,
+        is_dressing_room,
+        have_cashless,
+        have_cash,
+        allowed_cod,
+        site,
+        office_image_list {
+            url,
+            number,
+        }
+        work_time_list {
+            day,
+            time,
+        }
+        work_time_exceptions {
+            date,
+            time,
+            is_working
+        }
+        weight_min,
+        weight_max,
+        fulfillment,
+        dimensions {
+            width,
+            height,
+            depth,
+        }
+        errors {
+            code,
+            message
+        }
+    }
+}
+
+query cdekListCities($country_codes: [String!]! $postal_code: String!){
+    cdekListCities(country_codes: $country_codes postal_code: $postal_code){
+        code
+        errors {
+            code,
+            message
+        }
+    }
+}

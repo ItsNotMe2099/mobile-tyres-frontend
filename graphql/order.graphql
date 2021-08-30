@@ -1,0 +1,262 @@
+query activeOrder{
+    activeOrder{
+        ...orderFields
+    }
+}
+query orders($options: OrderListOptions){
+    activeCustomer{
+        orders(options: $options){
+            items{
+                ...orderFields
+                history(options: {
+                    skip: 0
+                    take: 100
+                    filter: {type: {in: ["ORDER_STATE_TRANSITION"]}}
+                    sort: {createdAt: DESC}
+                }){
+                    items{
+                        createdAt, type, data
+                    }
+                }
+            }
+            totalItems
+        }
+    }
+}
+mutation addItemToOrder($customFields: OrderLineCustomFieldsInput, $productVariantId: ID!, $quantity: Int!){
+    addItemToOrder(quantity: $quantity, productVariantId: $productVariantId customFields: $customFields){
+        ...on Order {
+           ...orderFields
+        }
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+        ...on InsufficientStockError{
+            errorCode
+            message
+            quantityAvailable
+        }
+    }
+}
+mutation removeOrderLine($orderLineId: ID!){
+    removeOrderLine(orderLineId: $orderLineId){
+        ...on Order {
+            ...orderFields
+        }
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+
+    }
+}
+
+mutation adjustOrderLine($orderLineId: ID!, $quantity: Int!){
+    adjustOrderLine(orderLineId: $orderLineId, quantity: $quantity){
+        ...on Order {
+         ...orderFields
+        }
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+    }
+}
+
+
+mutation setOrderShippingAddress($input: CreateAddressInput!){
+    setOrderShippingAddress(input: $input){
+        ...on Order {
+            ...orderFields
+        }
+        # querying the ErrorResult fields
+        # "catches" all possible errors
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+    }
+}
+
+
+mutation setOrderCustomFields($input: UpdateOrderInput!){
+    setOrderCustomFields(input: $input){
+        ...on Order {
+            ...orderFields
+        }
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+    }
+}
+
+
+mutation setOrderShippingMethod($shippingMethodId: ID!){
+    setOrderShippingMethod(shippingMethodId: $shippingMethodId){
+        ...on Order {
+            ...orderFields
+        }
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+    }
+}
+mutation applyCouponCode($couponCode: String!){
+    applyCouponCode(couponCode: $couponCode){
+        ...on Order {
+            ...orderFields
+        }
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+    }
+}
+mutation removeCouponCode($couponCode: String!){
+    removeCouponCode(couponCode: $couponCode){
+        ...on Order {
+            ...orderFields
+        }
+    }
+}
+
+
+mutation transitionOrderToState($state: String!){
+    transitionOrderToState(state: $state){
+        ...orderFields
+    }
+}
+
+mutation addPaymentOrder($input: PaymentInput!){
+    addPaymentToOrder(input: $input){
+        ...orderFields
+    }
+}
+fragment orderFields on Order {
+    id,
+    createdAt,
+    updatedAt,
+    orderPlacedAt,
+    code,
+    state,
+    active,
+    couponCodes
+    lines {
+        id
+        customFields{
+            customSizeBust
+            customSizeHeight
+            customSizeHip
+            customSizeWaist
+        }
+        linePrice
+        productVariant{
+            id,
+            sku,
+            name,
+            price,
+            stockLevel,
+            featuredAsset{
+                preview, focalPoint{x,y}
+            }
+            product{
+                id, name,
+                customFields{
+                    isHit
+                    oldPrice
+                }
+                featuredAsset{
+                    preview, focalPoint{x,y}
+                }
+                assets{
+                    preview, focalPoint{x,y}, tags{value},   customFields{
+                        facetValues{
+                            id, code facet{id, code, name}
+                        }
+                    }
+                }
+                relatedProducts {
+                    totalItems,
+                    items {
+                        id
+                    }
+
+                }
+            }
+            options  {
+                id,
+                code,
+                name,
+                group{
+                    name
+                    code
+                }
+            }
+        }
+        quantity,
+        customFields {
+            customSizeHeight,
+            customSizeBust,
+            customSizeWaist,
+            customSizeHip
+        }
+    }
+    totalQuantity,
+    subTotal,
+    subTotalWithTax,
+    currencyCode,
+    shipping,
+    shippingWithTax,
+    total,
+    totalWithTax,
+    bonus
+    discounts{
+        adjustmentSource
+        type
+        description
+        amount
+        amountWithTax
+    }
+    customFields {
+        comment
+        useBonuses
+    }
+    payments {
+        id,
+        createdAt,
+        updatedAt,
+        method,
+        amount,
+        state,
+        transactionId,
+        errorMessage,
+        metadata
+    },
+    shippingLines{
+        shippingMethod{
+            id code
+        }
+    }
+    shippingAddress {
+        fullName,
+        company,
+        streetLine1,
+        streetLine2,
+        city,
+        province,
+        postalCode,
+        country,
+        countryCode,
+        phoneNumber,
+        customFields {
+            boxberryPointCode
+            cdekPointCode
+            cdekCityCode
+            suggestion
+            point
+        }
+    }
+}

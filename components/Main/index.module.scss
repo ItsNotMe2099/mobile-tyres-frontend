@@ -1,0 +1,212 @@
+@import "scss/index";
+
+.root{
+  position: relative;
+  background-image: url('../../public/img/Main/bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 80px;
+  @media screen and (max-width: 1450px){
+    background-size: cover;
+    align-items: center;
+  }
+  @media screen and (max-width: 860px){
+    margin-top: 60px;
+  }
+}
+
+.container{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+  @media screen and (max-width: 1679px){
+    width: 95%;
+  }
+  @media screen and (max-width: 1000px){
+    width: auto;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0 11px;
+  }
+}
+
+.content{
+  display: flex;
+  margin-top: 20px;
+  @media screen and (max-width: 1450px){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.title{
+  width: 544px;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 122.5%;
+  color: #000000;
+  @media screen and (max-width: 1450px){
+    text-align: center;
+  }
+  @media screen and (max-width: 570px){
+    font-size: 24px;
+    width: 350px;
+  }
+  @media screen and (max-width: 374px){
+    width: 300px;
+    font-size: 20px;
+  }
+}
+
+.desc{
+  font-size: 17px;
+  line-height: 22px;
+  color: #4E4E4E;
+  margin-top: 10px;
+  width: 544px;
+  @media screen and (max-width: 1450px){
+    text-align: center;
+  }
+  @media screen and (max-width: 570px){
+    font-size: 14px;
+    width: 350px;
+  }
+  @media screen and (max-width: 374px){
+    width: 300px;
+    font-size: 12px;
+  }
+}
+
+.stores{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.google{
+  margin-right: 16px;
+  @media screen and (max-width: 570px){
+    margin-right: 12px;
+  }
+  img{
+    @media screen and (max-width: 570px){
+      width: 168px;
+    }
+    @media screen and (max-width: 374px){
+      width: 138px;
+    }
+  }
+}
+
+.apple{
+  img{
+    @media screen and (max-width: 570px){
+      width: 168px;
+    }
+    @media screen and (max-width: 374px){
+      width: 138px;
+    }
+  }
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 1450px){
+    margin-top: 25px;
+  }
+}
+
+.right{
+  position: relative;
+  width: 945px;
+  height: 612px;
+  @media screen and (max-width: 1000px){
+    width: 745px;
+    height: 500px;
+  }
+  @media screen and (max-width: 700px){
+    width: 445px;
+    height: 300px;
+  }
+  @media screen and (max-width: 400px){
+    margin-left: 20px;
+  }
+}
+
+.iphone{
+  position: absolute;
+  right: -10%;
+  z-index: 1;
+  @media screen and (max-width: 1000px){
+    right: -5%;
+  }
+  img{
+    @media screen and (max-width: 1000px){
+      width: 600px;
+    }
+    @media screen and (max-width: 700px){
+      width: 400px;
+    }
+  }
+}
+
+.circles{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @media screen and (max-width: 1000px){
+    right: 5%;
+    img{
+      width: 600px;
+      @media screen and (max-width: 700px){
+        width: 422px;
+      }
+    }
+  }
+}
+
+.client{
+  position: absolute;
+  bottom: 10%;
+  z-index: 2;
+  left: -7%;
+  @media screen and (max-width: 350px){
+    left: 0;
+  }
+  img{
+    @media screen and (max-width: 1000px){
+      width: 220px;
+    }
+    @media screen and (max-width: 700px){
+      width: 133px;
+    }
+  }
+}
+
+.worker{
+  position: absolute;
+  right: 16%;
+  bottom: 10%;
+  z-index: 2;
+  @media screen and (max-width: 350px){
+    right: 20%;
+  }
+  img{
+    @media screen and (max-width: 1000px){
+      width: 220px;
+    }
+    @media screen and (max-width: 700px){
+      width: 133px;
+    }
+  }
+}
+
+.phone{
+  position: relative;
+}

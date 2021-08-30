@@ -1,0 +1,22 @@
+mutation submitReview($input: SubmitProductReviewInput!){
+    submitProductReview(input: $input){
+    id
+    }
+}
+query productReviews($options: ProductReviewListOptions){
+    productReviews(options: $options){
+        items{
+            id,
+            reviewType,
+            summary,
+            authorName,
+            rating,
+            body,
+            createdAt,
+            assets {
+                id, preview, focalPoint{x,y}
+            }
+        }
+        totalItems
+    }
+}

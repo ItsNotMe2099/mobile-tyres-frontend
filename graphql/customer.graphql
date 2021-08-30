@@ -1,0 +1,71 @@
+mutation updateCustomer($input: UpdateCustomerInput!){
+    updateCustomer(input: $input){
+       ...customerFields
+
+    }
+}
+mutation updateEmailAddress($newEmailAddress: String!){
+    updateEmailAddress(newEmailAddress: $newEmailAddress){
+        ...on Success{success}
+        ...on ErrorResult {
+            errorCode
+            message
+        }
+    }
+}
+query activeCustomer{
+    activeCustomer{
+        ...customerFields
+    }
+}
+
+mutation updateCustomerAddress($input: UpdateAddressInput!){
+    updateCustomerAddress(input: $input){
+        id
+    }
+}
+mutation createCustomerAddress($input: CreateAddressInput!){
+    createCustomerAddress(input: $input){
+        id
+    }
+}
+fragment customerFields on Customer{
+    id,
+    createdAt,
+    updatedAt,
+    title,
+    firstName,
+    lastName,
+    phoneNumber,
+    emailAddress,
+    customFields{
+        bonus
+        newEmail
+    }
+    addresses {id,
+        createdAt,
+        updatedAt,
+        fullName,
+        company,
+        streetLine1,
+        streetLine2,
+        city,
+        province,
+        postalCode,
+        country {
+            id,
+            code,
+            name,
+            createdAt,
+            updatedAt
+        },
+        phoneNumber,
+        defaultShippingAddress,
+        defaultBillingAddress,
+        customFields{
+            boxberryPointCode
+            cdekCityCode
+            cdekPointCode
+        }
+    }
+}

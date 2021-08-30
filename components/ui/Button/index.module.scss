@@ -1,0 +1,72 @@
+
+@import "scss/index";
+
+    .link, .btn{
+
+        cursor: pointer;
+        outline: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        font-weight: bold;
+        color: white;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        text-transform: uppercase;
+        border-style: solid;
+        text-align: center;
+
+    }
+.disable{
+    opacity:  0.5;
+}
+.noPadding{
+    padding: 0;
+}
+
+.sizeMobile{
+    padding: 8px;
+}
+
+.sizeSmall{
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.sizeNormal{
+    padding: 15px 16px;
+    font-size: 16px;
+}
+.sizeLarge{
+    padding: 15px 35px;
+    font-size: 14px;
+}
+
+.green{
+    background: #13B72F;
+    border-radius: 10px;
+}
+
+.blue{
+    background: #006AFE;
+    border-radius: 3px;
+}
+
+.variantOutlined{
+    border: none;
+}
+.wrapper{
+   background: linear-gradient(82.24deg, #3F51B1 -64.39%, #5A55AE -41.99%, #7B5FAC -21.32%, #8F6AAE 1.08%, #A86AA4 21.76%, #CC6B8E 42.43%, #F18271 64.83%, #F3A469 85.5%, #F7C978 107.9%);
+   padding: 3px;
+   border-radius: 6px;
+}
+.variantContained{
+    border: none;
+}
+.fluid{
+    width: 100%;
+}
+
+.fontPink{
+   color: #E57B7B;
+}

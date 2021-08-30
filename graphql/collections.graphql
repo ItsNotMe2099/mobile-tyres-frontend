@@ -1,0 +1,32 @@
+query GetCollections ($options: CollectionListOptions){
+    collections(options: $options){
+        items{
+            id name slug position parent{id}
+        }
+        totalItems
+    }
+}
+
+query GetCollection($id: ID, $slug: String){
+    collection(id: $id, slug: $slug){
+       ...collectionFields
+        children{
+            ...collectionFields
+        }
+    }
+}
+
+
+fragment collectionFields on Collection{
+    id
+    name
+    slug
+    position
+    description
+    parent{id}
+
+    breadcrumbs{name, slug}
+    customFields{
+        seoTitle, seoDescription, seoKeywords
+    }
+}

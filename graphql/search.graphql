@@ -1,0 +1,62 @@
+query Search($input: SearchInput!){
+    search(input: $input){
+        facetValues{
+            facetValue{
+                id, code, name, facet {id, code, name}, customFields{
+                    seoTitle, seoDescription, seoKeywords
+                }
+            }
+        }
+        products {
+            id,
+            name,
+            customFields {
+                isHit,
+                oldPrice
+            }
+            inWishList,
+            slug,
+            assets{
+                preview
+                focalPoint{x,y}
+            }
+            featuredAsset{
+                preview, focalPoint{x, y}
+            }
+        }
+        items{
+            productId
+            price{
+                ... on PriceRange{
+                    min, max
+                }
+                ... on SinglePrice{
+                    value
+                }
+            }
+        },
+        totalItems
+    }
+}
+
+query SearchFacetValues($input: SearchInput!){
+    search(input: $input){
+        facetValues{
+            facetValue{
+                id, code, name, facet {id, code, name} customFields{
+                    seoTitle, seoDescription, seoKeywords
+                }
+            }
+        }
+    }
+}
+
+query facetValueByCode($code: String!){
+    facetByCode(code:  $code){
+       id, name, code, values{
+            id, name, code, customFields{
+                seoTitle, seoDescription, seoKeywords
+            }
+        }
+    }
+}

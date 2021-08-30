@@ -1,0 +1,158 @@
+
+query productById($id: ID!){
+    product(id: $id){
+        ...productFields
+    }
+}
+
+query productBySlug($slug: String!){
+    product(slug:$slug){
+        ...productFields
+    }
+}
+
+query ProductReleated($id: ID!){
+    product(id: $id){
+       id,
+        relatedProducts {
+            totalItems,
+            items {
+                id
+                name
+                slug
+                description
+                customFields{
+                    isHit
+                    oldPrice
+                }
+                variants{
+                    id, price
+                }
+                featuredAsset{
+                    preview, focalPoint{x,y}
+                }
+            }
+
+        }
+
+    }
+}
+mutation addProductsToCustomerWishList($productIds: [ID!]!){
+    addProductsToCustomerWishList(productsIds: $productIds){
+        success
+    }
+}
+mutation removeProductsFromCustomerWishList($productIds: [ID!]!){
+    removeProductsFromCustomerWishList(productsIds: $productIds){
+        success
+    }
+}
+query wishList{
+    wishList{
+        items{
+            ...productFields
+        }
+        totalItems
+    }
+}
+
+fragment productFields on Product{
+    id,
+    name,
+    slug,
+    description,
+
+
+    customFields{
+        isHit
+        oldPrice
+        seoTitle
+        seoDescription
+        seoKeywords
+        sizes
+        materials
+        care
+        reviewCount
+        reviewRating
+        optionGroups{
+            id name, code, options{
+                id, name, code
+            }
+        }
+    }
+    featuredAsset{
+        preview, focalPoint{x,y}
+    }
+    assets{
+        customFields{
+            facetValues{
+                id, code facet{id, code, name}
+            }
+        }
+        tags{
+            value
+        }
+        preview, focalPoint{x,y}
+    }
+    relatedProducts {
+        totalItems,
+        items {
+            id,
+            name,
+            slug,
+            description,
+            customFields{
+                isHit
+                oldPrice
+            }
+            featuredAsset{
+                preview, focalPoint{x,y}
+            }
+            assets{
+                preview, focalPoint{x,y}
+            }
+            variants{
+                ...variantFields
+            }
+        }
+
+    }
+
+    variants {
+        id,
+        sku,
+        name,
+        price,
+        stockLevel,
+        options  {
+            id,
+            code,
+            name,
+            groupId
+        }
+
+        productAssetsFilteredByFacets {
+            id,
+            name
+        }
+    }
+}
+
+fragment variantFields on ProductVariant{
+    id,
+    sku,
+    name,
+    price,
+    stockLevel,
+    options  {
+        id,
+        code,
+        name,
+        groupId
+    }
+
+    productAssetsFilteredByFacets {
+        id,
+        name
+    }
+}

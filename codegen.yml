@@ -1,0 +1,19 @@
+overwrite: true
+generates:
+  ./types/graphql.ts:
+    schema: 'https://yuliaterekhina.dev.glob-com.ru/api/shop-api'
+    documents:
+      - 'graphql/*.graphql'
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+      - plugin-typescript-swr
+config:
+  rawRequest: false
+  excludeQueries:
+    - foo*
+    - bar
+  useSWRInfinite:
+    - search
+  autogenSWRKey: false

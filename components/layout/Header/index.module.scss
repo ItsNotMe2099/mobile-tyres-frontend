@@ -1,0 +1,240 @@
+@import "scss/index";
+
+.root{
+ height: 80px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 100;
+ width: 100%;
+ position: fixed;
+ border-bottom: 1px solid #dcdcdc;
+ background-color: #fff;
+ @media screen and (max-width: 860px){
+  display: none;
+}
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 860px){
+    justify-content: space-between;
+  }
+}
+
+.scrolled{
+  background: #000000;
+  margin-top: 0;
+}
+
+.black{
+  background-color: #000 !important;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  svg{
+    margin-right: 13px;
+    fill: #13B72F;
+  }
+}
+
+.title{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.165px;
+  color: #000000; 
+  span{
+    color: #006afe;
+  }
+}
+
+.item{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4E4E4E;
+  padding: 0 25px;
+  &:hover{
+    color: #13B72F !important;
+  }
+}
+
+.active{
+  height: 80px;
+  background-color: #e8f8eb;
+  border-bottom: 2px solid #13B72F;
+  display: flex;
+  align-items: center;
+  color: #13B72F
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 850px){
+    justify-content: center;
+    div{
+      button{
+        font-size: 20px;
+      }
+      div{
+        button{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.firstBtn{
+  margin-right: 10px;
+}
+
+.list{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 5%;
+  @media screen and (max-width: 1575px){
+    margin: 0 2%;
+  }
+  @media screen and (max-width: 1475px){
+    display: none;
+  }
+}
+
+.listMobile{
+  display: flex;
+  flex-direction: column;
+  .item{
+    padding: 25px;
+  }
+}
+
+.listMedium{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 2%;
+  @media screen and (min-width: 1476px){
+    display: none;
+  }
+  @media screen and (max-width: 1375px){
+    display: none;
+  }
+}
+
+.listSmall{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 2%;
+  @media screen and (min-width: 1376px){
+    display: none;
+  }
+  @media screen and (max-width: 1275px){
+    display: none;
+  }
+}
+
+.listExtraSmall{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 2%;
+  @media screen and (min-width: 1276px){
+    display: none;
+  }
+  @media screen and (max-width: 1150px){
+    display: none;
+  }
+}
+
+.listSuperSmall{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 2%;
+  @media screen and (min-width: 1151px){
+    display: none;
+  }
+  @media screen and (max-width: 950px){
+    display: none;
+  }
+}
+
+.listTwoItems{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 2%;
+  @media screen and (min-width: 951px){
+    display: none;
+  }
+}
+
+.headerMobile{
+  @media screen and (min-width: 861px){
+    display: none;
+  }
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.menuOpen{
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  margin-left: 24px;
+}
+
+.dropdownMobile{
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 60px;
+  z-index: 4;
+}
+
+.right{
+  display: flex;
+  align-items: center;
+}

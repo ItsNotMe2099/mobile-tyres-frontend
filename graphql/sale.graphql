@@ -1,0 +1,21 @@
+
+query sales($options: SaleDescriptionListOptions){
+    saleDescriptions(options: $options){
+        items {
+            id
+            createdAt
+            updatedAt
+            summary
+            body
+            discount
+            asset {
+                id
+                preview
+                focalPoint{x, y}
+            }
+            couponCode
+            url
+        },
+        totalItems
+    }
+}
