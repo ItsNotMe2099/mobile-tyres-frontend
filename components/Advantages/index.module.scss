@@ -1,0 +1,57 @@
+@import "scss/index";
+
+.root{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 58px;
+  position: relative;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;
+  text-align: center;
+  color: #000000;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.circles{
+  position: relative;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.image{
+  position: absolute;
+  img{
+    width: 191px;
+    height: 412px;
+  }
+}
+
+.circlesSvg{
+  width: 412px;
+  height: 412px;
+}
+
+.right{
+  display: grid;
+  grid-gap: 60px
+}
+
+.left{
+    display: grid;
+    grid-gap: 60px
+}

@@ -8,9 +8,6 @@ import Dollar from 'components/svg/Dollar'
 import Percent from 'components/svg/Percent'
 import Headphones from 'components/svg/Headphones'
 import Quality from 'components/svg/Quality'
-import Switch from 'components/Switch'
-import Circle from 'components/Circle'
-import Item from 'components/Item'
 
 
 interface Props {
@@ -35,25 +32,37 @@ export default function HowItWorks(props: Props) {
       <div className={styles.text}>
         Узнайте как работает наше приложение. Быстрый и удобный способ заказ шиномонтажа в Москве.
       </div>
-      <Switch 
-        clickOnDriver={() => who === 'driver' ? null : setWho('driver')} 
-        clickOnPartner={() => who === 'partner' ? null : setWho('partner')}
-        who={who}
-      />
+      <div className={styles.switch}>
+        <div onClick={() => who === 'driver' ? null : setWho('driver')} className={cx(styles.driver, {[styles.activeDriver]: who === 'driver'})}>
+          Водитель
+        </div>
+        <div onClick={() => who === 'partner' ? null : setWho('partner')} className={cx(styles.driver, {[styles.activePartner]: who === 'partner'})}>
+          Партнер
+        </div>
+      </div>
       <div className={styles.content}>
-        <Circle 
-        rootClassName={styles.circles}
-        svgClassName={styles.circlesSvg}>
+        <div className={styles.circles}>
+          <Circles svgClassName={styles.circlesSvg} className1={styles.circle1} className2={styles.circle2} className3={styles.circle3}/>
           <div className={styles.image}>
             <img src={who === 'driver' ? '/img/HowItWorks/IphoneGreen.png' : '/img/HowItWorks/IphoneBlue.png'} alt=''/>
           </div>
-        </Circle>
+        </div>
         <div className={styles.right}>
           {cons.map(item =>
-           <Item item={item}/>
+           <div className={styles.item}>
+              <div className={styles.itemImage}>
+                {item.image}
+              </div>
+              <div className={styles.label}>
+                {item.label}
+              </div>
+              <div className={styles.desc}>
+                {item.desc}
+              </div>
+            </div>
           )}
         </div>
-        </div>
       </div>
+    </div>
   )
 }

@@ -1,4 +1,5 @@
 import AboutUs from 'components/AboutUs'
+import Advantages from 'components/Advantages'
 import HowItWorks from 'components/HowItWorks'
 import Footer from 'components/layout/Footer'
 import Header from 'components/layout/Header'
@@ -12,6 +13,7 @@ export default function Home(props) {
       <body className={styles.white}>
       <Main/>
       <HowItWorks/>
+      <Advantages/>
       </body>
       <AboutUs/>
     </Layout>

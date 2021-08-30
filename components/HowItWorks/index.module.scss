@@ -35,6 +35,7 @@
   width: 40%;
   align-self: center;
   margin-top: 10px;
+  margin-bottom: 20px;
   @media screen and (max-width: 1100px){
     width: 60%;
   }
@@ -48,40 +49,6 @@
   @media screen and (max-width: 450px){
     width: 100%;
   }
-}
-
-.switch{
-  padding: 10px 20px;
-  background: #F7F7F7;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  margin-top: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.driver{
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  color: #000000;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.activeDriver{
-  background-color: #13B72F;
-  border-radius: 10px;
-  color: #fff;
-}
-
-.activePartner{
-  background-color: #006AFE;
-  border-radius: 10px;
-  color: #fff;
 }
 
 .circles{
@@ -107,6 +74,7 @@
 .content{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 100px;
   @media screen and (max-width: 1415px){
     justify-content: space-between;
   }
@@ -139,50 +107,4 @@
     width: 286px;
     height: 286px;
   }
-}
-
-.circle1{
-  fill: #13B72F;
-}
-
-.circle2{
-  stroke: #13B72F;
-}
-
-.circle3{
-  stroke: #13B72F;
-}
-
-.item{
-  
-}
-
-.itemImage{
-  background: #e8f8eb;
-  border-radius: 10px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  svg{
-    fill: #13B72F;
-    stroke: #13B72F;
-  }
-}
-
-.label{
-  margin-top: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-
-.desc{
-  font-size: 14px;
-  line-height: 17px;
-  color: #4E4E4E;
-  margin-top: 10px;
-  width: 160px;
 }

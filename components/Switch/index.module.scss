@@ -1,0 +1,34 @@
+@import "scss/index";
+
+.switch{
+  padding: 10px 20px;
+  background: #F7F7F7;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.driver{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.activeDriver{
+  background-color: #13B72F;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.activePartner{
+  background-color: #006AFE;
+  border-radius: 10px;
+  color: #fff;
+}

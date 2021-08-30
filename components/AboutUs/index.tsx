@@ -1,13 +1,4 @@
-import Link from 'next/link'
-import { useState } from 'react'
 import styles from './index.module.scss'
-import cx from 'classnames'
-import Circles from 'components/svg/Circles'
-import Tire from 'components/svg/Tire'
-import Dollar from 'components/svg/Dollar'
-import Percent from 'components/svg/Percent'
-import Headphones from 'components/svg/Headphones'
-import Quality from 'components/svg/Quality'
 
 
 interface Props {

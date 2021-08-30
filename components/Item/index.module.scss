@@ -1,0 +1,54 @@
+@import "scss/index";
+
+.item{
+  display: flex;
+  flex-direction: column;
+}
+
+.right{
+  align-self: flex-end;
+}
+
+.itemImage{
+  background: #e8f8eb;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #13B72F;
+  svg{
+    fill: #13B72F;
+    stroke: #13B72F;
+  }
+}
+
+.active{
+  background-color: #13B72F;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.label{
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.desc{
+  font-size: 14px;
+  line-height: 17px;
+  color: #4E4E4E;
+  margin-top: 10px;
+  width: 160px;
+}
