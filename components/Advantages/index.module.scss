@@ -8,6 +8,13 @@
   padding-top: 50px;
   padding-bottom: 58px;
   position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 500px){
+    width: 100%;
+    margin: 0;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
 }
 
 .title{
@@ -24,6 +31,9 @@
   margin-bottom: 40px;
   margin-top: 40px;
   justify-content: center;
+  @media screen and (max-width: 860px){
+    flex-direction: column;
+  }
 }
 
 .circles{
@@ -38,20 +48,44 @@
   img{
     width: 191px;
     height: 412px;
+    position: relative;
+    z-index: 1;
   }
 }
 
 .circlesSvg{
-  width: 412px;
-  height: 412px;
+  min-width: 412px;
 }
 
 .right{
   display: grid;
-  grid-gap: 60px
+  grid-gap: 60px;
+  @media screen and (max-width: 860px){
+      display: none;
+  }
 }
 
 .left{
     display: grid;
-    grid-gap: 60px
+    grid-gap: 60px;
+    @media screen and (max-width: 860px){
+      display: none;
+    }
+}
+
+.mobileItems{
+  display: none;
+  @media screen and (max-width: 860px){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  align-self: center;
+  margin-top: 46px;
+  }
+  @media screen and (max-width: 435px){
+    grid-gap: 10px;
+  }
+  @media screen and (max-width: 374px){
+    grid-template-columns: 1fr;
+  }
 }

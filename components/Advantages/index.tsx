@@ -29,21 +29,23 @@ const [who, setWho] = useState('driver')
         <div className={styles.left}>
           {left.map(item =>
             item.number === '1' ?
-            <Item item={item} right active/>
+            <Item item={item} right active line/>
             :
-            <Item item={item} right/>
+            <Item item={item} right line/>
           )}
         </div>
         <Circle
         rootClassName={styles.circles}
-        svgClassName={styles.circlesSvg}>
+        svgClassName={styles.circlesSvg}
+        circles2
+        >
           <div className={styles.image}>
             <img src={who === 'driver' ? '/img/Advantages/IphoneGreen.png' : '/img/Advantages/IphoneBlue.png'} alt=''/>
           </div>
         </Circle>
         <div className={styles.right}>
           {right.map(item =>
-            <Item item={item}/>
+            <Item item={item} line left/>
           )}
         </div>
       </div>
@@ -52,6 +54,11 @@ const [who, setWho] = useState('driver')
         clickOnPartner={() => who === 'partner' ? null : setWho('partner')}
         who={who}
       />
+      <div className={styles.mobileItems}>
+          {[...left, ...right].map(item =>
+            <Item item={item}/>
+          )}
+        </div>
     </div>
   )
 }

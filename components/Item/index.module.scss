@@ -22,6 +22,7 @@
   line-height: 24px;
   text-align: center;
   color: #13B72F;
+  position: relative;
   svg{
     fill: #13B72F;
     stroke: #13B72F;
@@ -43,6 +44,9 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
+  @media screen and (max-width: 410px){
+    font-size: 12px;
+  }
 }
 
 .desc{
@@ -51,4 +55,31 @@
   color: #4E4E4E;
   margin-top: 10px;
   width: 160px;
+  @media screen and (max-width: 410px){
+    font-size: 12px;
+  }
+}
+
+.none{
+  display: none;
+}
+
+.line{
+  position: absolute;
+  bottom: 30%;
+}
+
+.lineRight{
+  left: 100%;
+}
+
+.lineLeft{
+  right: 100%;
+}
+
+.mobileItems{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  align-self: center;
 }
