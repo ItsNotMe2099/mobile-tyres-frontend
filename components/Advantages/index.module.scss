@@ -23,6 +23,9 @@
   line-height: 122.5%;
   text-align: center;
   color: #000000;
+  @media screen and (max-width: 600px){
+    font-size: 18px;
+  }
 }
 
 .content{
