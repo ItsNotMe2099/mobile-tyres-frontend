@@ -1,6 +1,7 @@
 import AboutUs from 'components/AboutUs'
 import Advantages from 'components/Advantages'
 import ClientsSearch from 'components/ClientsSearch'
+import FAQ from 'components/FAQ'
 import HowItWorks from 'components/HowItWorks'
 import Footer from 'components/layout/Footer'
 import Header from 'components/layout/Header'
@@ -20,6 +21,7 @@ export default function Home(props) {
       <TireFitting/>
       <ClientsSearch/>
       <Price/>
+      <FAQ/>
       </body>
       <AboutUs/>
     </Layout>

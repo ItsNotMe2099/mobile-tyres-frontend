@@ -1,0 +1,29 @@
+@import "scss/index";
+
+.root{
+  margin: 0 auto;
+  width: 80%;
+  padding: 53px 0 107px 0;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 500px){
+    width: 100%;
+    padding: 42px 0 29px 0;
+  }
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+  @media screen and (max-width: 500px){
+    font-size: 18px;
+  }
+}
+
+.items{
+  margin-top: 40px;
+}
