@@ -1,0 +1,150 @@
+@import "scss/index";
+
+.root{
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  @media screen and (max-width: 1230px){
+    width: 100%;
+  }
+  @media screen and (max-width: 1200px){
+    flex-direction: column-reverse;
+  }
+}
+
+.bg{
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  @media screen and (max-width: 1230px){
+    right: -15%;
+  }
+  @media screen and (max-width: 1200px){
+    bottom: 39%;
+  }
+  @media screen and (max-width: 850px){
+    right: -30%;
+  }
+  @media screen and (max-width: 750px){
+    bottom: 35%;
+  }
+  @media screen and (max-width: 670px){
+    right: -50%;
+  }
+  @media screen and (max-width: 600px){
+    bottom: 43%;
+    right: -43%;
+  }
+  @media screen and (max-width: 450px){
+    bottom: 46%;
+    right: -58%;
+  }
+  @media screen and (max-width: 400px){
+    bottom: 49%;
+    right: -65%;
+  }
+  @media screen and (max-width: 375px){
+    right: -70%;
+    bottom: 46%;
+  }
+  @media screen and (max-width: 320px){
+    right: -85%;
+    bottom: 49%;
+  }
+  img{
+    position: relative;
+    z-index: 3;
+    @media screen and (max-width: 600px){
+      height: 360px;
+    }
+  }
+}
+
+.blue{
+  background-color: #e6f1ff;
+  padding: 109px 0;
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 750px){
+    padding: 50px 0;
+  }
+}
+
+.circles{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image{
+  position: absolute;
+  img{
+    width: 263px;
+    height: 568px;
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: 600px){
+      width: 196px;
+      height: 423px;
+    }
+  }
+}
+
+.circlesSvg{
+  min-width: 568px;
+  min-height: 568px;
+  @media screen and (max-width: 600px){
+    min-width: 423px;
+    min-height: 423px;
+  }
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;
+  color: #000000;
+  @media screen and (max-width: 1200px){
+    text-align: center;
+  }
+  @media screen and (max-width: 400px){
+    font-size: 18px;
+  }
+}
+
+.right{
+  align-self: center;
+  width: 32%;
+  @media screen and (max-width: 1200px){
+    width: 50%;
+    margin-top: 43px;
+  }
+  @media screen and (max-width: 750px){
+    width: 90%;
+  }
+  @media screen and (max-width: 400px){
+    width: 100%;
+    padding: 0 11px;
+  }
+}
+
+.text{
+  font-size: 18.4074px;
+  line-height: 22px;
+  color: #4E4E4E;
+  margin-top: 10px;
+  @media screen and (max-width: 1200px){
+    text-align: center;
+  }
+}
+
+.stores{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  @media screen and (max-width: 1200px){
+    justify-content: center;
+  }
+}

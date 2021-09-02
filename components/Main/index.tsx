@@ -1,3 +1,5 @@
+import Apple from 'components/Stores/Apple'
+import Google from 'components/Stores/Google'
 import Link from 'next/link'
 import styles from './index.module.scss'
 
@@ -20,16 +22,8 @@ export default function Main(props: Props) {
               Предлагаем заказать выездной шиномонтаж поблизости. Работаем круглосуточно в каждом районе Москвы. 
             </div>
             <div className={styles.stores}>
-              <Link href="#">
-              <a className={styles.google}>
-                <img src='/img/Main/googleplay.png' alt=''/>
-              </a>
-              </Link>
-              <Link href="#">
-              <a className={styles.apple}>
-                <img src='/img/Main/appstore.png' alt=''/>
-              </a>
-              </Link>
+              <Google/>
+              <Apple/>
             </div>
           </div>
           <div className={styles.right}>

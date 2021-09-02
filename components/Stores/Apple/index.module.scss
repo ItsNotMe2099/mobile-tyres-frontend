@@ -1,0 +1,12 @@
+@import "scss/index";
+
+.apple{
+  img{
+    @media screen and (max-width: 570px){
+      width: 168px;
+    }
+    @media screen and (max-width: 374px){
+      width: 138px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "scss/index";
+
+.google{
+  margin-right: 16px;
+  @media screen and (max-width: 570px){
+    margin-right: 12px;
+  }
+  img{
+    @media screen and (max-width: 570px){
+      width: 168px;
+    }
+    @media screen and (max-width: 374px){
+      width: 138px;
+    }
+  }
+}
