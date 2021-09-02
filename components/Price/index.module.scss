@@ -1,0 +1,70 @@
+@import "scss/index";
+
+.root{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 102px;
+  width: 80%;
+  @media screen and (max-width: 500px){
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin-top: 27px;
+    margin-bottom: 35px;
+  }
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;
+  text-align: center;
+  color: #000000;
+  @media screen and (max-width: 450px){
+    font-size: 18px;
+  }
+}
+
+.prices{
+  margin-top: 40px;
+  @media screen and (max-width: 500px){
+    margin-top: 22px;
+  }
+  .option{
+  &:nth-child(2n){
+    background-color: #fff;
+  }
+}
+}
+
+.option{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e8f8eb;
+  @media screen and (max-width: 350px){
+    flex-direction: column;
+  }
+}
+
+.label{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  @media screen and (max-width: 400px){
+    font-size: 12px;
+  }
+}
+
+.price{
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: #383838;
+  @media screen and (max-width: 400px){
+    font-size: 14px;
+  }
+}
