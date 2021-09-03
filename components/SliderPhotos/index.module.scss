@@ -1,0 +1,95 @@
+@import "scss/index";
+
+.root{
+  padding-top: 44px;
+  padding-bottom: 49px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.green{
+  background-color: #e8f8eb;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;  
+  text-align: center;
+  color: #000000;
+  margin-bottom: 35px;
+  @media screen and (max-width: 375px){
+    font-size: 18px;
+  }
+}
+
+.dots{
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  text-align: center;
+  padding: 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  :global .slick-active{
+      background: #13B72F;
+      padding: 2px;
+      border-radius: 50%;
+      width: 15px !important;
+      height: 15px !important;
+    button{
+      width: 7px !important;
+      height: 7px !important;
+      background: #13B72F !important;
+      opacity: 1 !important;
+      &::before{
+        opacity: .75 !important;
+        color: black !important;
+      }
+    }
+  }
+  li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+
+    button{
+      width: 9px;
+      height: 9px;
+      background: #7dd78d;
+      border-radius: 50%;
+      opacity: 0.5;
+      border: none;
+      color: transparent;
+      text-indent: -9999px;
+      margin: 0;
+      padding: 0;
+      transition: width 0.1s, height 0.1s;
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      cursor: pointer;
+      outline: none;
+
+      &::before{
+        font-family: 'slick';
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+      }
+    }
+  }
+}

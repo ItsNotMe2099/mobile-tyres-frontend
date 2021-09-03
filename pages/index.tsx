@@ -8,6 +8,7 @@ import Header from 'components/layout/Header'
 import Layout from 'components/layout/Layout'
 import Main from 'components/Main'
 import Price from 'components/Price'
+import SliderPhotos from 'components/SliderPhotos'
 import TireFitting from 'components/TireFitting'
 import styles from './index.module.scss'
 
@@ -21,6 +22,7 @@ export default function Home(props) {
       <TireFitting/>
       <ClientsSearch/>
       <Price/>
+      <SliderPhotos/>
       <FAQ/>
       </body>
       <AboutUs/>

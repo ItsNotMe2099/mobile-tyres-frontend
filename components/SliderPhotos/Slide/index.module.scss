@@ -1,0 +1,22 @@
+@import "scss/index";
+
+.root{
+  @media screen and (max-width: 1679px){
+    margin: 0 55px;
+  }
+}
+
+.green{
+  background-color: #e8f8eb;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 122.5%;  
+  text-align: center;
+  color: #000000;
+  @media screen and (max-width: 375px){
+    font-size: 18px;
+  }
+}
