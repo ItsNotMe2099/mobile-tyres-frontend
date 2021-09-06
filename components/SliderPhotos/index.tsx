@@ -24,11 +24,22 @@ export default function SliderPhotos(props: Props) {
     dotsClass: `${styles.dots}`,
     responsive: [
       {
-        breakpoint: 1679,
+        breakpoint: 1680,
         settings: {
           slidesToShow: 3,
-          variableWidth: true
-        }
+        },
+      },
+      {
+        breakpoint: 1340,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+        },
       },
     ]
   };

@@ -5,6 +5,21 @@
   padding-bottom: 49px;
   width: 90%;
   margin: 0 auto;
+  @media screen and (max-width: 500px){
+    width: 100%;
+    margin: 0;
+  }
+  :global .slick-slider{
+    .slick-slide{
+      div{
+        display: flex;
+        justify-content: center;
+        @media screen and (max-width: 500px){
+          justify-content: unset;
+        }
+      }
+    }
+  }
 }
 
 .green{

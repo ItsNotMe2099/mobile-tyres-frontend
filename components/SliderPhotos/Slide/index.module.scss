@@ -1,8 +1,9 @@
 @import "scss/index";
 
 .root{
-  @media screen and (max-width: 1679px){
-    margin: 0 55px;
+  width: 100%;
+  @media screen and (max-width: 500px){
+    height: 343px;
   }
 }
 

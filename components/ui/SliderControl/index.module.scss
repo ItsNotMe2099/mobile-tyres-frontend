@@ -2,9 +2,24 @@
 
 .next{
   position: absolute;
-  right: 0;
+  right: -40px;
   cursor: pointer;
   bottom: 55%;
+  svg{
+    fill: #13B72F;
+  }
+  @media screen and (max-width: 900px){
+    right: 0;
+  }
+  @media screen and (max-width: 500px){
+    z-index: 1;
+    padding: 13px;
+    background: rgba(19, 183, 47, 0.8);
+    border-radius: 10px 0px 0px 10px;
+    svg{
+      fill: #fff;
+    }
+  }
 }
 
 .prev{
@@ -13,4 +28,19 @@
   left: -40px;
   bottom: 55%;
   cursor: pointer;
+  svg{
+    fill: #13B72F;
+  }
+  @media screen and (max-width: 900px){
+    left: 0;
+  }
+  @media screen and (max-width: 500px){
+    z-index: 1;
+    padding: 13px;
+    background: rgba(19, 183, 47, 0.8);
+    border-radius: 10px 0px 0px 10px;
+    svg{
+      fill: #fff;
+    }
+  }
 }
