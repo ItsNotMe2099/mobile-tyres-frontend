@@ -1,7 +1,7 @@
 import styles from './index.module.scss'
-import SliderControl from "components/ui/SliderControl";
 import Slider from "react-slick";
 import Slide from './Slide';
+import SliderControlPhotos from 'components/ui/SliderControlPhotos';
 
 
 interface Props {
@@ -13,8 +13,8 @@ export default function SliderPhotos(props: Props) {
   const settings = {
     dots: true,
     arrows:true,
-    nextArrow: <SliderControl direction="next"/>,
-    prevArrow: <SliderControl direction="prev"/>,
+    nextArrow: <SliderControlPhotos direction="next"/>,
+    prevArrow: <SliderControlPhotos direction="prev"/>,
     infinite: true,
     speed: 500,
     slidesToShow: 4,

@@ -1,0 +1,59 @@
+@import "scss/index";
+
+.root{
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  justify-content: unset !important;
+  margin: 0 12px;
+  @media screen and (max-width: 500px){
+    max-width: 270px;
+  }
+  @media screen and (max-width: 374px){
+    max-width: 220px;
+  }
+}
+
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: unset !important;
+}
+
+.avatar{
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  display: flex;
+  justify-content: unset !important;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: unset !important;
+}
+
+.name{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  justify-content: unset !important;
+}
+
+.text{
+  font-family: Gilroy;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4E4E4E;
+  justify-content: unset !important;
+  margin-top: 8px;
+}
