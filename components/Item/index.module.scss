@@ -3,6 +3,7 @@
 .item{
   display: flex;
   flex-direction: column;
+  max-height: 150px;
 }
 
 .right{
@@ -23,6 +24,7 @@
   text-align: center;
   color: #13B72F;
   position: relative;
+  min-height: 48px;
   svg{
     fill: #13B72F;
     stroke: #13B72F;
@@ -44,6 +46,7 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
+  align-self: auto;
   @media screen and (max-width: 410px){
     font-size: 12px;
   }

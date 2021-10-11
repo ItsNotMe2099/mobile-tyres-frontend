@@ -12,18 +12,18 @@ interface Props {
 
 export default function Advantages(props: Props) {
 
-const left = [{label: 'Онлайн оплата', desc: 'Узнайте как работает наше приложение.', number: '1'},
-{label: 'Проверенные мастера', desc: 'Узнайте как работает наше приложение.', number: '2'}]
+const left = [{label: 'Заказ услуги', desc: 'Вы указываете свое местоположение, причину вызова (ремонт, переобувка), радиус колес и тип повреждений', number: '1'},
+{label: 'Поиск специалиста', desc: 'После нажатия на кнопку «Вызвать помощь» ваш заказ направляется всем ремонтникам, находящимся поблизости', number: '2'}]
 
-const right = [{label: 'Репорты и статистика', desc: 'Узнайте как работает наше приложение.', number: '3'},
-{label: 'Онлайн поддержка', desc: 'Узнайте как работает наше приложение.', number: '4'}]
+const right = [{label: 'Выполнение заказа', desc: 'Исполнитель берет заказ, приезжает к вам в течение 10-15 минут и делает свою работу', number: '3'},
+{label: 'Оплата и оценка', desc: 'Вы принимаете результат, оплачиваете услугу и ставите оценку исполнителю', number: '4'}]
 
 const [who, setWho] = useState('driver')
 
   return (
     <div className={styles.root}>
       <div className={styles.title}>
-        Наши преимущества
+        Как это работает?
       </div>
       <div className={styles.content}>
         <div className={styles.left}>

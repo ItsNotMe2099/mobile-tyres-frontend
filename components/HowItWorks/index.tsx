@@ -21,19 +21,19 @@ export default function HowItWorks(props: Props) {
 
   const [who, setWho] = useState('driver')
 
-  const cons = [{label: 'Мгновенная помощь', desc: 'Узнайте как работает наше приложение.', image: <Tire/>},
-  {label: 'Прозрачные цены', desc: 'Узнайте как работает наше приложение.', image: <Dollar/>},
-  {label: 'Скидки и акции', desc: 'Узнайте как работает наше приложение.', image: <Percent/>},
-  {label: 'Онлайн поддержка', desc: 'Узнайте как работает наше приложение.', image: <Headphones/>},
-  {label: 'Гарантия качества', desc: 'Узнайте как работает наше приложение.', image: <Quality/>}]
+  const cons = [{label: 'Мгновенная помощь', desc: 'Ремонтники приедут на вызов через 10-15 минут', image: <Tire/>},
+  {label: 'Прозрачные цены', desc: 'Расчет точной стоимости при оформлении заявки', image: <Dollar/>},
+  {label: 'Скидки и акции', desc: 'Реальная экономия на услугах шиномонтажа', image: <Percent/>},
+  {label: 'Онлайн поддержка', desc: 'Квалифицированная помощь в режиме 24/7', image: <Headphones/>},
+  {label: 'Гарантия качества', desc: 'Если вас не устроит качество услуг – мы вернем деньги', image: <Quality/>}]
 
   return (
     <div className={styles.root}>
       <div className={styles.title}>
-        Как работает наше приложение
+        Преимущества TyreApp
       </div>
       <div className={styles.text}>
-        Узнайте как работает наше приложение. Быстрый и удобный способ заказ шиномонтажа в Москве.
+        TyreApp – простое и удобное приложение для заказа выездного шиномонтажа в Москве.
       </div>
       <Switch 
         clickOnDriver={() => who === 'driver' ? null : setWho('driver')} 
