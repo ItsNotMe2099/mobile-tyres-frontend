@@ -3,7 +3,7 @@ import Instagram from 'components/svg/Instagram'
 import Link from 'next/link'
 import styles from './index.module.scss'
 import Logo from 'components/svg/Logo'
-import { CONTACTS, LINKS } from 'types'
+import { CONTACTS } from 'types'
 import Youtube from 'components/svg/Youtube'
 import SubscribeSection from 'components/SubscribeSection'
 
@@ -91,7 +91,7 @@ const partners = [{label: 'Условия', link: '#'},
               <Link href={`${CONTACTS.instagram}`}>
                 <a className={styles.icon} target="blank"><Instagram/></a>
               </Link>
-              <Link href={`${CONTACTS.facebook}`}>
+              <Link href='#'>
                 <a className={styles.icon} target="blank"><Youtube/></a>
               </Link>
               <Link href={`${CONTACTS.facebook}`}>
