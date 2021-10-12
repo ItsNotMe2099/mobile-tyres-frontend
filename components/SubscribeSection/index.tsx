@@ -19,7 +19,7 @@ export default function SubscribeSection(props: Props) {
 
   }
   return (
-      <div className={styles.root}>
+      <div className={styles.root} style={{display: 'none'}}>
         {isSuccess && <div className={styles.success}>
             Спасибо! Вы подписались.
         </div>}
