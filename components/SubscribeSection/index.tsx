@@ -5,7 +5,6 @@ import Input from 'components/ui/Inputs/Input'
 import {email, required} from 'utils/validations'
 import FormError from 'components/ui/Form/FormError'
 import {useState} from 'react'
-import getAuthorizedSdk from 'sdk'
 
 interface Props {
 
@@ -17,22 +16,10 @@ export default function SubscribeSection(props: Props) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const handleSubmit = async (data) => {
-    setIsLoading(true);
-    try {
-      const res = await getAuthorizedSdk().createSubscription({
-        input: {
-          emailAddress: data.email
-        }
-      })
-    }catch (e){
 
-    }
-
-    setIsLoading(false);
-    setIsSuccess(true)
   }
   return (
-      <div className={styles.root}>
+      <div className={styles.root} style={{display: 'none'}}>
         {isSuccess && <div className={styles.success}>
             Спасибо! Вы подписались.
         </div>}
