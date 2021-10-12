@@ -34,8 +34,8 @@ services:
         environment:
           API_HOST: http://mobile-tyres-api-nginx
           ADMIN_HOST: http://mobile-tyres-admin
-          VIRTUAL_HOST: mobile-tyres.ru
-          LETSENCRYPT_HOST: mobile-tyres.ru
+          VIRTUAL_HOST: mobil-help.ru
+          LETSENCRYPT_HOST: mobil-help.ru
           LETSENCRYPT_EMAIL: sites.globcom@yandex.ru
           VIRTUAL_PORT: 80
 
