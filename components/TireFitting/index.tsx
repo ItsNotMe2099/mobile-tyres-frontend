@@ -11,7 +11,8 @@ interface Props {
 export default function TireFitting(props: Props) {
 
   return (
-    <body className={styles.green} id={props.id}>
+    <div id={props.id}>
+    <body className={styles.green}>
       <div className={styles.bg}>
         <img src='/img/TireFitting/car.svg' alt=''/>
       </div>
@@ -39,5 +40,6 @@ export default function TireFitting(props: Props) {
         </div>
       </div>
     </body>
+    </div>
   )
 }
