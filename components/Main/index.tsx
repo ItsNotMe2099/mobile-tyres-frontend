@@ -5,13 +5,13 @@ import styles from './index.module.scss'
 
 
 interface Props {
-
+  id: string
 }
 
 export default function Main(props: Props) {
 
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id={props.id}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.left}>

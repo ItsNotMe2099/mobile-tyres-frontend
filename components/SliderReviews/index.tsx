@@ -5,7 +5,7 @@ import SliderControl from 'components/ui/SliderControl';
 
 
 interface Props {
-
+  id?: string
 }
 
 export default function SliderReviews(props: Props) {
@@ -73,7 +73,7 @@ export default function SliderReviews(props: Props) {
 
   return (
     <body className={styles.green}>
-    <div className={styles.root}>
+    <div className={styles.root} id={props.id}>
       <div className={styles.title}>
         Последние отзывы
       </div>

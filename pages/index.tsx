@@ -17,17 +17,17 @@ export default function Home(props) {
   return (
     <Layout>
       <body className={styles.white}>
-      <Main/>
+      <Main id='main'/>
       <HowItWorks/>
-      <SliderReviews/>
+      <SliderReviews id='reviews'/>
       <Advantages/>
-      <TireFitting/>
+      <TireFitting id='services'/>
       <ClientsSearch/>
-      <Price/>
+      <Price id='forClients'/>
       <SliderPhotos/>
-      <FAQ/>
+      <FAQ id='faq'/>
       </body>
-      <AboutUs/>
+      <AboutUs id='forPartners'/>
     </Layout>
   )
 }

@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 
 
 interface Props {
-
+  id?: string
 }
 
 export default function FAQ(props: Props) {
@@ -28,7 +28,7 @@ export default function FAQ(props: Props) {
   {title: 'Как пройти в библиотеку?', content: 'Проверка качества осуществляется с помощью специальной компьютеризированной аппаратуры, показывающей на дисплее все недочеты и дающей рекомендации по их устранению. От того, насколько правильно все сделано, зависит безопасность водителя и пассажиров'},]
 
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id={props.id}>
       <div className={styles.title}>
         Часто задаваемые вопросы
       </div>
