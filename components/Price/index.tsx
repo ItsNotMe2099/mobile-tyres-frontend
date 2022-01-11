@@ -2,7 +2,7 @@ import styles from './index.module.scss'
 
 
 interface Props {
-
+  id?: string
 }
 
 export default function Price(props: Props) {
@@ -14,7 +14,7 @@ export default function Price(props: Props) {
   {label: 'Ремон в пределах Москвы', price: '2 000 руб.'}]
 
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id={props.id}>
       <div className={styles.title}>
         Средняя стоимость услуг
       </div>

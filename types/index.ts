@@ -15,7 +15,8 @@ export interface IResponse {
 
 
 export const CONTACTS = {
-  email: 'info@tyreapp.com',
-  instagram: '',
-  facebook: ''
+  email: 'info.mobilhelp@gmail.com',
+  instagram: 'https://www.instagram.com/mobil_help.ru/',
+  facebook: 'https://vk.com/mobilhelpapp',
+  appStore: 'https://apps.apple.com/ua/app/mobil-help/id1590825579?l=ru'
 }

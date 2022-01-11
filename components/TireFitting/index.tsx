@@ -5,13 +5,13 @@ import styles from './index.module.scss'
 
 
 interface Props {
-
+  id?: string
 }
 
 export default function TireFitting(props: Props) {
 
   return (
-    <body className={styles.green}>
+    <body className={styles.green} id={props.id}>
       <div className={styles.bg}>
         <img src='/img/TireFitting/car.svg' alt=''/>
       </div>

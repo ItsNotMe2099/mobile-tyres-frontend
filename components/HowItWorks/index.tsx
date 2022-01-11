@@ -30,10 +30,10 @@ export default function HowItWorks(props: Props) {
   return (
     <div className={styles.root}>
       <div className={styles.title}>
-        Преимущества TyreApp
+        Преимущества Mobil-help
       </div>
       <div className={styles.text}>
-        TyreApp – простое и удобное приложение для заказа выездного шиномонтажа в Москве.
+        Mobil-help – простое и удобное приложение для заказа выездного шиномонтажа в Москве.
       </div>
       <Switch 
         clickOnDriver={() => who === 'driver' ? null : setWho('driver')} 

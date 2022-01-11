@@ -14,14 +14,14 @@ interface Props {
 export default function Footer(props: Props) {
 
   const options = [{label: 'Преимущества', link: '#'},
-  {label: 'FAQ', link: '#'},
+  {label: 'FAQ', link: '/#faq'},
   {label: 'Поддержка', link: '#'},
   {label: 'Условия', link: '#'},
 ]
 
-const about = [{label: 'Отзывы', link: '#'},
-  {label: 'FAQ', link: '#'},
-  {label: 'Про нас', link: '#'},
+const about = [{label: 'Отзывы', link: '/#reviews'},
+  {label: 'FAQ', link: '/#faq'},
+  {label: 'Про нас', link: '/#forPartners'},
   {label: 'Работа', link: '#'},
   {label: 'Контакты', link: '#'},
 ]
@@ -39,7 +39,7 @@ const partners = [{label: 'Условия', link: '#'},
         <a>
         <div className={styles.logo}>
           <Logo/>
-          <div className={styles.title}>TYREAPP.RU</div>
+          <div className={styles.title}>Mobil-help</div>
         </div>
         </a>
         </Link>
@@ -103,7 +103,7 @@ const partners = [{label: 'Условия', link: '#'},
         </div>
       </div>
       <div className={styles.copyright}>
-        Tyre app  © 2021
+        Mobil-help  © 2021
       </div>
     </div>
   )
