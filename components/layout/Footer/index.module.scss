@@ -113,15 +113,6 @@
 .email{
   display: flex;
   align-items: center;
-  margin-top: 25px;
-  img{
-    margin-right: 15px;
-  }
-}
-
-.email{
-  display: flex;
-  align-items: center;
   margin-top: 22px;
   img{
     margin-right: 16px;
@@ -151,6 +142,10 @@
 
 .icon{
   margin-right: 16px;
+  svg{
+    width: 37px;
+    height: 37px;
+  }
   svg{
     fill: #fff;
     &:hover{

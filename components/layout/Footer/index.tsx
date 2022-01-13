@@ -6,6 +6,7 @@ import Logo from 'components/svg/Logo'
 import { CONTACTS } from 'types'
 import Youtube from 'components/svg/Youtube'
 import SubscribeSection from 'components/SubscribeSection'
+import VK from 'components/svg/VK'
 
 
 interface Props {
@@ -95,7 +96,7 @@ const partners = [{label: 'Условия', link: '#'},
                 <a className={styles.icon} target="blank"><Youtube/></a>
               </Link>
               <Link href={`${CONTACTS.facebook}`}>
-                <a className={styles.icon} target="blank"><Facebook/></a>
+                <a className={styles.icon} target="blank"><VK/></a>
               </Link>
               </div>
             </div>
