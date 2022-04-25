@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import styles from './index.module.scss'
+import { CONTACTS } from 'types'
 
 
 interface Props {
@@ -9,10 +9,8 @@ interface Props {
 export default function Google(props: Props) {
 
   return (
-      <Link href="#">
-        <a className={styles.google}>
+        <a className={styles.google} href={CONTACTS.googlePlay}>
           <img src='/img/Main/googleplay.png' alt=''/>
         </a>
-      </Link>
   )
 }
