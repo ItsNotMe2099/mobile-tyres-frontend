@@ -2,6 +2,10 @@
 
 .root{
   width: 100%;
+  img{
+    height: 241px;
+    width: 377px;
+  }
   @media screen and (max-width: 500px){
     height: 343px;
   }
