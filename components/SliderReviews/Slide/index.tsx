@@ -2,7 +2,7 @@ import styles from './index.module.scss'
 import StarRatings from 'react-star-ratings'
 
 interface IItem{
-  avatar: string
+  avatar?: string
   name: string
   rating: number
   text: string
@@ -19,7 +19,7 @@ export default function Slide(props: Props) {
     <div className={styles.root}>
       <div className={styles.top}>
         <div className={styles.avatar}>
-          <img src={props.item.avatar ? props.item.avatar : '/img/photos/avatar.svg'} alt=''/>
+          <img src={'/img/photos/avatar.svg'} alt=''/>
         </div>
         <div className={styles.info}>
           <div className={styles.name}>{props.item.name}</div>
