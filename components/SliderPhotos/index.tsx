@@ -45,7 +45,7 @@ export default function SliderPhotos(props: Props) {
   };
 
   const photos = [{photo: '/img/photos/Rectangle29.png'}, {photo: '/img/photos/newimage.jpg'},
-  {photo: '/img/photos/Rectangle31.png'}, {photo: '/img/photos/Rectangle32.png'}, {photo: '/img/photos/Rectangle33.png'}]
+  {photo: '/img/photos/Rectangle31.png'}, {photo: '/img/photos/Rectangle33.png'}]
 
   return (
     <body className={styles.green}>
