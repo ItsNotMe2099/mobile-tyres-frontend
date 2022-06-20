@@ -214,7 +214,7 @@ const handleClearBodyClass = () => {
         </a>
         </Link>
         <div className={styles.right}>
-        <Button size='mobile' color='green'><Download/></Button>
+        {/*<Button size='mobile' color='green'><Download/></Button>*/}
         {!isMenuMobileOpen && (
           <div
             className={styles.menuOpen}
