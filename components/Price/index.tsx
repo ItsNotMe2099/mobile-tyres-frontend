@@ -1,4 +1,5 @@
 import styles from './index.module.scss'
+import classNames from 'classnames'
 
 
 interface Props {
@@ -35,6 +36,7 @@ export default function Price(props: Props) {
             </div>
           </div>
         )}
+        <a href='/files/mobil-help¥.pdf' className={classNames(styles.option, styles.full)}>Полный прайс</a>
       </div>
     </div>
   )

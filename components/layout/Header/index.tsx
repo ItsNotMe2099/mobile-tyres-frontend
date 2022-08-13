@@ -22,7 +22,7 @@ export default function Header(props: Props) {
   {label: 'Партнерам', link: '/#forPartners'},
   {label: 'Отзывы', link: '/#reviews'},
   {label: 'FAQ', link: '/#faq'},
-  {label: 'Поддержка', link: '/#service'},
+  {label: 'Поддержка', link: 'https://t.me/Mobil_help'},
 ]
 
 const [isMenuMobileOpen, setMenuMobileOpen] = useState(false)

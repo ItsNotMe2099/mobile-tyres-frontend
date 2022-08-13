@@ -16,7 +16,7 @@ export default function Footer(props: Props) {
 
   const options = [{label: 'Преимущества', link: '#'},
   {label: 'FAQ', link: '/#faq'},
-  {label: 'Поддержка', link: '#'},
+  {label: 'Поддержка', link: 'https://t.me/Mobil_help'},
   {label: 'Условия', link: '#'},
 ]
 
