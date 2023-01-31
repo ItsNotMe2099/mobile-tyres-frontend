@@ -16,6 +16,7 @@ ARG ENV_FILE=.env
 COPY enviroments/${ENV_FILE} ./.env
 
 # Building app
+ENV NODE_OPTIONS --openssl-legacy-provider
 RUN npm run build
 EXPOSE 8080/tcp
 
